@@ -1,7 +1,7 @@
 public class StudentVal {
     private final String name;
     private final int age;
-    private final int course; // заменили GPA на course
+    private final int course; 
 
     public StudentVal(String name, int age, int course) {
         this.name = name;
