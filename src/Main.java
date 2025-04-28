@@ -12,25 +12,25 @@ public class Main {
             for (int j = 0; j < 10; j++) {
                 code.append((char) ('A' + random.nextInt(26)));
             }
-            code.append(random.nextInt(10000)); // добавляем число в конец кода
+            code.append(random.nextInt(10000)); 
 
             MyTestingClass key = new MyTestingClass(id, code.toString());
 
             StudentVal value = new StudentVal(
                     "Student" + i,
                     18 + random.nextInt(10),
-                    random.nextInt(101) // Теперь случайное целое значение для GPA от 0 до 100
+                    random.nextInt(101) 
             );
 
             table.put(key, value);
         }
 
-        // Теперь этот метод просто выводит информацию на экран
+
         printBucketSizes(table);
     }
 
     private static void printBucketSizes(MyHashTable<?, ?> table) {
-        int[] bucketSizes = table.getBucketSizes();  // Теперь вызываем getBucketSizes
+        int[] bucketSizes = table.getBucketSizes(); 
         int total = 0, min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 
         for (int i = 0; i < bucketSizes.length; i++) {
